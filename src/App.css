@@ -1,0 +1,70 @@
+body{
+    background-color: black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+}
+.image, .spin-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+.container{
+    width:80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:auto; 
+}
+.card{
+    margin:1rem;
+    color:white;
+    border-radius: 15px;
+    background-color: rgb(52, 52, 52);
+    display:flex;
+    flex-direction: column;
+    padding: .4rem;
+}
+.date{
+    color:grey;
+    margin-top: 0;
+}
+.border{
+    border:1.5px solid red;
+}
+.card:hover{
+    box-shadow: 4px 4px 4px 4px blue;
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color:yellow;
+    margin:1rem;
+}
+p, h3{
+    margin-left: 1rem;
+}
+/*Animation*/
+.spin-container{
+    margin-top:10rem;
+}
+@keyframes spin {
+  from {transform: rotate(0deg)}  
+  to {transform:rotate(360deg)}
+}
+.spin{
+    animation: spin 5s linear infinite;
+}
+
+
+@media (max-width:780px) {
+ .container{
+    grid-template-columns: 1fr 1fr ;
+ }   
+}
+
+@media (max-width:400px) {
+    .container{
+       grid-template-columns: 1fr;
+    }   
+   }
